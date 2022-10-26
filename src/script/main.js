@@ -1,4 +1,4 @@
-let workers = [
+let workerArray = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
@@ -26,3 +26,16 @@ let workers = [
     }
 ]
 
+printWorkersData(workerArray)
+
+function printWorkersData(workers){
+    workers.forEach(worker => {
+        printWorkerData(worker);
+    });
+}
+
+function printWorkerData(worker){
+    for (const key in worker) {
+        console.log(key + ": " + worker[key])
+    }
+}
